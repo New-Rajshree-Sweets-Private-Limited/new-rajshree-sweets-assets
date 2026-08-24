@@ -27,7 +27,8 @@ jobs:
             [ -e "$f" ] && cp -a "$f" _cdn/
           done
           for d in gallery-images product-categories product-images icon slider-images \
-                   social-media-logos loader about-us misc google-business whatsapp-quick-replies; do
+                   social-media-logos loader about-us misc google-business whatsapp-quick-replies \
+                   reviews; do
             [ -d "$d" ] || continue
             rsync -a --exclude 'node_modules' --exclude '.DS_Store' \
               --exclude '*.jpg' --exclude '*.JPG' --exclude '*.jpeg' --exclude '*.JPEG' \
